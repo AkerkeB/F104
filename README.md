@@ -4,13 +4,10 @@ Room for students
 import sympy as smp
 import numpy as np
 import matplotlib.pyplot as plt
-with open('hw1.txt') as f:
-    for i in range(100):
-        x_val = np.genfromtxt('hw1.txt')
-        f.close()
+x_val = np.genfromtxt('hw1.txt')
 x = smp.symbols('x')
 func = x**2 + 2*x + 1
-f_val = np.zeros(1000)
+f_val = np.zeros(100)
 i = 0
 for val in x_val:
     f_val[i] = func.subs([(x,val)]) 
@@ -22,6 +19,6 @@ plt.plot(x_val, f_val, label='linear line', color = 'red', linewidth=2)
 plt.xlabel('x axis')
 plt.ylabel('y axis')
 plt.legend()
-plt.title("Akerke's first plot")
+plt.title("AkerkeB's first plot")
 plt.show()
-fig.savefig('akerkesfig.pdf')
+fig.savefig("akerkeb'sfig.pdf")
